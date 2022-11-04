@@ -4,7 +4,7 @@ In this tutorial, you'll learn about the use of regex match emails with this exp
 
 ## Summary
 
-We'll start by understanding what a regular expression is. A regular expression is a sequence of symbols and characters that translate to a particular search pattern, especially within a string.
+We'll start by understanding what a regular expression is. A regular expression is a sequence of symbols and characters that translate to a particular search pattern, especially within a string. In this case, we will be using regex and how we can use it to matching an email.
 
 ## Table of Contents
 
@@ -23,26 +23,31 @@ We'll start by understanding what a regular expression is. A regular expression 
 ## Regex Components
 
 ### Anchors
+I'll be breaking down these symbols/characters and its uses here.
+`^`
+`$`
 
+`(m)`
 ### Quantifiers
-
-### OR Operator
+`+`
+`.com`
+`{2,6}`
+`[a-z\.]`
 
 ### Character Classes
-
-### Flags
+`\d`
 
 ### Grouping and Capturing
+`([a-z0-9_\.]+)`
 
 ### Bracket Expressions
+`[a-z0-9_\.-]`
+`[\da-z\.-]`
+`[a-z\.]`
 
 ### Greedy and Lazy Match
-
-### Boundaries
-
-### Back-references
-
-### Look-ahead and Look-behind
+`+`
+`{}`
 
 ## Author
 
