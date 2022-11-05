@@ -1,6 +1,6 @@
 # "Matching an Emal" Regex Tutorial
 
-In this tutorial, you'll learn about the use of regex match emails with this expression: "/^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/". You can find this useful when you are trying to validate emails using applications like Inquirer.
+In this tutorial, you'll learn about the use of regex match emails with this expression: `/^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/`. You can find this useful when you are trying to validate emails using applications like Inquirer.
 
 ## Summary
 
@@ -10,32 +10,27 @@ We'll start by understanding what a regular expression is. A regular expression 
 
 - [Anchors](#anchors)
 - [Quantifiers](#quantifiers)
-- [OR Operator](#or-operator)
 - [Character Classes](#character-classes)
-- [Flags](#flags)
 - [Grouping and Capturing](#grouping-and-capturing)
 - [Bracket Expressions](#bracket-expressions)
 - [Greedy and Lazy Match](#greedy-and-lazy-match)
-- [Boundaries](#boundaries)
-- [Back-references](#back-references)
-- [Look-ahead and Look-behind](#look-ahead-and-look-behind)
 
 ## Regex Components
 
 ### Anchors
 I'll be breaking down these symbols/characters and its uses here.
-`^`
-`$`
 
-`(m)`
+`^` indicates the start of a string.
+`$` indicates the end of a string.
+
+There may be instances where you see `(m)` for a multine string, but that won't be enabled all the time. With that being said, the regex will end at `$`.
 ### Quantifiers
-`+`
-`.com`
-`{2,6}`
-`[a-z\.]`
+`+` serve the purpose of connecting the email name + the email service + `.com`.
+
+`{2,6}` in this case, will enable a match range of 2 to 6 characters from a to z which is expressed as `[a-z\.]`. Before you scroll on, I'll explain what it means to have a match range. With regex, you have a few options to match a digit. You can match a number from 0 to 9 to another single choice. With a match range, you can match a range of digits with a character group. Keep this in mind for the character classes section below.
 
 ### Character Classes
-`\d`
+`\d` matches a single character or symbol that is a digit between 0 and 9. If the character group allows any digit between said numbers, it will be replaced with a shorthand `\d`. For more clarification, a `\d` will replace a single digit like "5", but not "55".
 
 ### Grouping and Capturing
 `([a-z0-9_\.]+)`
