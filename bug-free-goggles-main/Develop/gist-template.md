@@ -33,7 +33,9 @@ There may be instances where you see `(m)` for a multine string, but that won't 
 `\d` matches a single character or symbol that is a digit between 0 and 9. If the character group allows any digit between said numbers, it will be replaced with a shorthand `\d`. For more clarification, a `\d` will replace a single digit like "5", but not "55".
 
 ### Grouping and Capturing
-`([a-z0-9_\.]+)`
+`([a-z0-9_\.]+)` captures group one, which declares and matches with the user's email name.
+`([\da-z\.-]+)` captures group two, which declares and matches with the email service.
+`([a-z\.]{2,6})` captures group three, which matches with `.com`.
 
 ### Bracket Expressions
 `[a-z0-9_\.-]`
