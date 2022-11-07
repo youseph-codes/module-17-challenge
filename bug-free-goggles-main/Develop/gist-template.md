@@ -38,14 +38,15 @@ There may be instances where you see `(m)` for a multine string, but that won't 
 `([a-z\.]{2,6})` captures group three, which matches with `.com`.
 
 ### Bracket Expressions
-`[a-z0-9_\.-]`
-`[\da-z\.-]`
-`[a-z\.]`
+`[a-z0-9_\.-]` matches any alphabetic character from "a" to "z", any digit character from "0" to "9", and the use of an underscore, period, or a dash character ("-", "_", and "."). I'll also mention that the matches for alphabetical characters are case sensitive.
+`[\da-z\.-]` does the job of matching a single digit from "0" to "9", any alphabetical and case sensitive character from "a" to "z", and the use of periods or dashes("." and "-").
+`[a-z\.]` will match any alphabetical and case sensitive character from "a" to "z" as well as any use of the period character(".").
 
 ### Greedy and Lazy Match
-`+`
-`{}`
+`+`, as you remember from the quantifiers section above, is used in this instance of regex as what they call greedy matches. With the `+` quantifier, it's going to match as much as it could and returning what's needed.
+`{}` is also used in this instance to match with `{2,6}` for the last group to capture.
 
 ## Author
 
-A short section about the author with a link to the author's GitHub profile (replace with your information and a link to your profile)
+Thanks for the read! Feel free to browse through some of my projects over at...
+https://github.com/youseph-codes 
